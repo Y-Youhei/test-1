@@ -1,0 +1,82 @@
+/******************************************************************
+
+Stylesheet: 560px以上のタブレットやモニタで適用
+
+******************************************************************/
+
+/******************************************************************/
+
+.first-view {
+  &__word {
+    top: 4%;
+    left: 43%;
+    font-size: 9vw;
+  }
+}
+
+.box-container {
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  .box {
+    flex-basis: 48%;
+    height: 136px;
+  }
+}
+
+/*****  about  *************************/
+
+.about {
+  &__content {
+    display: flex;
+  }
+  &__youtube {
+    position: relative;
+    width: 100%;
+  }
+  &__left {
+    flex-basis: 50%;
+    order: 0;
+
+    & .about__texts {
+      padding-right: 32px;
+      
+        }
+  }
+  &__right {
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    order: 1;
+  
+    & .about__texts {
+      padding-left: 32px;
+    }
+  }
+  
+  &__names {
+    font-size: 24px;
+   
+  }
+}
+
+
+/*****  contact  *************************/
+
+.form {
+  &__item {
+    & input {
+      display: block;
+      margin: 0 auto;
+      width: 80%;
+    }
+  }
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & input {
+      width: 200px;
+    }
+  }
+}

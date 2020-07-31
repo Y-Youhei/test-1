@@ -1,0 +1,142 @@
+/******************************************************************
+
+Stylesheet: 960px以上のモニタで適用
+
+******************************************************************/
+
+.font-sm {
+  font-size: 16px;
+}
+.font-md {
+  font-size: 19px;
+}
+.font-lr {
+  font-size: 23px;
+}
+.font-lg {
+  font-size: 36px;
+}
+
+.mb-lg {
+  margin-bottom: 150px !important;
+}
+.pb-lg {
+  padding-bottom: 150px !important;
+}
+
+/****************************************/
+
+.flex {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/*****  header  *************************/
+
+.header {
+  &__nav {
+    display: block;
+  }
+}
+
+.mobile-menu {
+  &__btn {
+    display: none;
+  }
+}
+/*****  about  *************************/
+.about {
+  &__img {
+    flex-basis: 30%;
+  }
+  &__names {
+    font-size: 32px;
+    flex-basis: 30%;
+  }
+  &__name {
+    position: relative;
+    @include p-base($width: 170px, $height:3px, $top:25%, $left:-100px) {
+      background-color: $cBlack;
+      transform: translateY(-50%) scale(0);
+      transition: transform 0.3s ease 1s;
+      transform-origin: right;
+    }
+    &.inview {
+      &::before {
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+
+
+/*****  skills  *************************/
+
+.list {
+  margin-bottom: 80px;
+}
+
+.box-container {
+  justify-content: space-around;
+
+ & .box {
+    flex-basis: 22%;
+    height: 250px;
+  }
+}
+
+/*****  contact  *************************/ 
+
+label {
+  text-align: start;
+}
+.form {
+  &__content {
+    height: 300px;
+  }
+
+  &__items {
+    flex-basis: 50%;
+  }
+  &__item {
+    & input {
+      width: 100%;
+    }
+  }
+  &__btn {
+    margin-top: 0;
+    flex-basis: 50%;
+    & input {
+      width: 35%;
+    }
+  }
+}
+
+// *****  footer  ********************
+
+.footer {
+  background-color: $cBgGray;
+  &__inner {
+    justify-content: start;
+  }
+  & .logo {
+    flex-basis: 30%;
+    order: 0;
+  }
+
+  &__message {
+    opacity: 0;
+    font-size: 40px;
+    order: 1;
+    flex-basis: 54%;
+    text-align: center;
+  }
+  &__copyright {
+    flex-basis: 16%;
+    padding: 0;
+    text-align: end;
+    order: 2;
+  }
+
+}
